@@ -8,8 +8,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 main{
+    position: relative;
     width: 1440px;
     height: 100vh;
     display: flex;
@@ -166,9 +168,25 @@ main{
 .btn:hover{
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
+.attribution{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    color: hsla(224, 30%, 27%, 0.6);
+    font-size: 12px;
+}
+.attribution a{
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 2px;
+    color: hsl(224, 30%, 27%);
+}
 @media (max-width: 376px){
     main{
         align-items: start;
+        width: 375px;
     }
     .container{
         flex-direction: row;
@@ -201,4 +219,11 @@ main{
     .right-title{
         margin-top: -40px;
     }
+    .attribution{
+        display: none;
+    }
+    /* .attribution a{
+        font-size: 10px;
+        margin-left: 3px;
+    } */
 }
